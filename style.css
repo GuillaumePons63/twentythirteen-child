@@ -1,0 +1,451 @@
+/*
+Theme Name: Theme enfant
+Description: Theme pour le site de guy Lalière
+Author: Guillaume Pons
+Author URI: www.guillaumeweb.fr
+Template: twentythirteen
+Version: 0.1.0
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+body {
+  background: url(./images/background.jpg) center center no-repeat fixed !important;
+  background-size: cover !important;
+  font-size: 125%;
+  text-align: justify;
+  background-color: rgba(76, 175, 80, 0.3);
+}
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta {
+  max-width: none !important;
+}
+.wp-block-group:not(.alignfull):not(.alignwide)
+  > .wp-block-group__inner-container
+  > * {
+  width: 100% !important;
+}
+.facebook {
+  height: 1000px !important;
+  width: 380px !important;
+  margin: auto;
+}
+.site-main {
+  padding: 0 50px !important;
+}
+.site {
+  background-color: hsl(0deg 0% 100% / 55%) !important;
+  max-width: none !important;
+}
+
+body:not(.sidebar) .alignfull {
+  background: none !important;
+}
+
+.site-name {
+  position: absolute;
+  top: 90px;
+  z-index: 4;
+  text-align: center;
+  margin: auto;
+  color: white !important;
+  width: 100%;
+  font-size: 2em !important;
+}
+
+.site-footer-custom {
+  height: 200px;
+  background-color: #f7f5e7;
+  border-top: 1px solid rgba(27, 27, 27, 0.1);
+  height: 100%;
+  width: auto;
+  display: flex;
+}
+.navigation a {
+  transition: all 250ms ease-in-out;
+  color: #bc360a;
+}
+.nav-menu li a {
+  font-size: 1em;
+}
+.custom-logo-link {
+  width: 40%;
+}
+.post-navigation {
+  background: none;
+}
+
+.custom-logo {
+  width: 40%;
+  height: auto;
+}
+
+.jumbo {
+  text-align: center;
+  background-color: #f7f5e7;
+  height: 50px;
+}
+
+form {
+  margin: 0;
+  text-align: center;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  padding-right: 2px;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+  animation: entryMenu 300ms ease-in-out;
+}
+
+@keyframes entryMenu {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(100%);
+    transform-origin: top;
+  }
+}
+.site-title {
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #a7bd4e;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+
+  /* Animation du titre */
+
+  animation-name: wave;
+
+  animation-iteration-count: infinite;
+
+  animation-timing-function: ease-in-out;
+
+  animation-duration: 10s;
+
+  animation-delay: 0.55s;
+}
+
+@media screen and (max-width: 475px) {
+  .site-title {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+  .custom-logo {
+    width: 100px;
+    height: auto;
+    margin: auto;
+  }
+  .nav-menu-bas {
+    font-size: 70%;
+  }
+  .menu-toggle {
+    font-size: 26px;
+  }
+  .main-navigation {
+    text-align: center;
+  }
+}
+
+@keyframes wave {
+  40%,
+  50% {
+    transform: scale(1.05);
+  }
+  0%,
+  90%,
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.site-name:hover {
+  text-decoration: none;
+}
+
+/* Pour animation header */
+
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.slideshow--hero {
+  z-index: 3;
+  left: 0;
+  top: 50%;
+  height: 85%;
+  transform: translateY(-50%) skewY(-10deg);
+  transform-origin: center;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+}
+.slideshow--hero .slides {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100vw;
+  height: 100vh;
+  animation: 11s slideshow-hero-mobile -3s infinite;
+}
+.slideshow--hero .slide1 {
+  background-image: url(./images/illustration_1.jpg);
+  animation: 20s slides-set-1 -0.1s infinite;
+}
+.slideshow--hero .slide2 {
+  background-image: url(./images/Illustration_2.jpg);
+  animation: 20s slides-set-2 -0.1s infinite;
+}
+.slideshow--hero .slide3 {
+  background-image: url(./images/Illustration_3.jpg);
+  animation: 20s slides-set-3 -0.1s infinite;
+}
+@media (min-width: 600px) {
+  .slideshow--hero {
+    left: 50%;
+    top: 0;
+    width: 67%;
+    height: 100%;
+    transform: translateX(-50%) skewX(-10deg);
+  }
+  .slideshow--hero .slides {
+    top: 0;
+    left: -25%;
+    height: 100%;
+    animation: 11s slideshow-hero -3s infinite;
+  }
+}
+.slideshow--contrast {
+  z-index: 1;
+  width: 100%;
+  height: 50%;
+  transform: none;
+}
+.slideshow--contrast--before {
+  left: 0;
+}
+.slideshow--contrast--before .slides {
+  width: 100vw;
+}
+.slideshow--contrast--after {
+  z-index: 2;
+  left: auto;
+  right: 0;
+}
+.slideshow--contrast--after .slides {
+  width: 100vw;
+  left: auto;
+  right: 0;
+}
+.slideshow--contrast .slides {
+  animation: 14s slideshow-contrast -5s infinite;
+}
+.slideshow--contrast .slide1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(./images/illustration_1.jpg);
+  animation: 20s slides-set-1 -0.2s infinite;
+}
+.slideshow--contrast .slide2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(./images/Illustration_2.jpg);
+  animation: 20s slides-set-2 -0.2s infinite;
+}
+.slideshow--contrast .slide3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(200, 200, 75, 0.25) 0,
+      rgba(200, 75, 75, 0.5) 100%
+    ),
+    url(./images/Illustration_3.jpg);
+  animation: 20s slides-set-3 -0.2s infinite;
+}
+.slideshow--contrast--after {
+  top: auto;
+  bottom: 0;
+}
+.slideshow--contrast--after .slides {
+  animation: 13s slideshow-contrast -13s infinite;
+}
+.slideshow--contrast--after .slide {
+  background-position: right;
+}
+.slideshow--contrast--after .slide1 {
+  animation: 20s slides-set-1 infinite;
+}
+.slideshow--contrast--after .slide2 {
+  animation: 20s slides-set-2 infinite;
+}
+.slideshow--contrast--after .slide3 {
+  animation: 20s slides-set-3 infinite;
+}
+@media (min-width: 600px) {
+  .slideshow--contrast {
+    width: 50%;
+    height: 100%;
+  }
+  .slideshow--contrast--after {
+    top: 0;
+    bottom: auto;
+  }
+  .slideshow--contrast--after .slides {
+    width: 50vw;
+  }
+}
+
+.slides,
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@keyframes slideshow-hero-mobile {
+  0% {
+    transform: scale(1) skewY(10deg);
+  }
+  50% {
+    transform: scale(1.05) skewY(10deg);
+  }
+  100% {
+    transform: scale(1) skewY(10deg);
+  }
+}
+@keyframes slideshow-hero {
+  0% {
+    transform: scale(1) skewX(10deg);
+  }
+  50% {
+    transform: scale(1.05) skewX(10deg);
+  }
+  100% {
+    transform: scale(1) skewX(10deg);
+  }
+}
+@keyframes slideshow-contrast {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes slides-set-1 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  31% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  34% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  97% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slides-set-2 {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  31% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  34% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  64% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  67% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+@keyframes slides-set-3 {
+  0% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  64% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  67% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  97% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+.archive-header {
+  visibility:hidden;
+}

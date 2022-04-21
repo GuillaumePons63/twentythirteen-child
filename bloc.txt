@@ -1,0 +1,1 @@
+<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
