@@ -39,35 +39,22 @@
             <div class=jumbo>
                 <p> Guy Lalière - 06 22 86 60 35 </p>
             </div>
-            <div class="wrapper">
-                <div class="slideshows">
-                    <div class="slideshow slideshow--hero">
-                        <div class="slides">
-                            <div class="slide slide1"></div>
-                            <div class="slide slide2"></div>
-                            <div class="slide slide3"></div>
-                        </div>
-                    </div>
-                    <div class="slideshow slideshow--contrast slideshow--contrast--before">
-                        <div class="slides">
-                            <div class="slide slide1"></div>
-                            <div class="slide slide2"></div>
-                            <div class="slide slide3"></div>
-                        </div>
-                    </div>
-                    <div class="slideshow slideshow--contrast slideshow--contrast--after">
-                        <div class="slides">
-                            <div class="slide slide1"></div>
-                            <div class="slide slide2"></div>
-                            <div class="slide slide3"></div>
-                        </div>
-                    </div>
+            <div class=slideLogo>
+                <div class=logo>
+                </div>
+                <div class=slide>
+                    <ul class="slideshow">
+		                <li><span></span></li>
+	                    <li><span></span></li>
+		                <li><span></span></li>
+                    </ul>
                 </div>
             </div>
-            <a class="home-link site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+  
+            <!-- <a class="home-link site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>"
                 title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                 <h1 class="site-title"><?php bloginfo( 'description' ); ?></h1>
-            </a>
+            </a> -->
 
             <div id="navbar" class="navbar">
                 <nav id="site-navigation" class="navigation main-navigation" role="navigation">
