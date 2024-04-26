@@ -3,7 +3,11 @@
 function childtheme_parent_styles() {
  
  // enqueue style
- wp_enqueue_style( 'parent', get_template_directory_uri().'/style.css' );
+ if ($_ENV['WP_ENV'] === 'dev') {
+    wp_enqueue_style( 'parent', get_template_directory_uri().'/style.css' );
+ } else {
+    wp_enqueue_style( 'parent', get_template_directory_uri().'/assets/style.min.css' );
+ }
                      
 }
 
