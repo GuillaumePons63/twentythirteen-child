@@ -1,15 +1,11 @@
 <?php
-/* enqueue script for parent theme stylesheeet */        
+/* enqueue script for parent theme stylesheeet */  
 function childtheme_parent_styles() {
- 
- // enqueue style
- if ($_ENV['WP_ENV'] === 'dev') {
-    wp_enqueue_style( 'parent', get_template_directory_uri().'/style.css' );
- } else {
-    wp_enqueue_style( 'parent', get_template_directory_uri().'/assets/style.min.css' );
- }
-                     
-}
+    wp_enqueue_style( 
+    'parent', get_template_directory_uri().'/style.css' );
+    wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.min.css', array('parent-style'));
+}               
+
 
 function montheme_supports() {
     add_theme_support( 'custom-logo', array(
@@ -21,7 +17,6 @@ function montheme_supports() {
         'unlink-homepage-logo' => true, 
     ));
     register_nav_menu('foot','Menu du bas');
- 
    
 }
 
