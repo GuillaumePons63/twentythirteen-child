@@ -175,7 +175,7 @@ ul.nav-menu .focus>ul,
 .logo {
   width: 30%;
   height: auto;
-  background-image: url(./images/Logo.jpg);
+  background-image: url(./images/Logo.webp);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -239,17 +239,17 @@ ul.nav-menu .focus>ul,
 }
 
 .slideshow li:nth-child(1) span {
-  background-image: url("./images/illustration_1.jpg");
+  background-image: url("./images/illustration_1.webp");
   animation-delay: 0s;
 }
 
 .slideshow li:nth-child(2) span {
-  background-image: url("./images/Illustration_2.jpg");
+  background-image: url("./images/Illustration_2.webp");
   animation-delay: 6s;
 }
 
 .slideshow li:nth-child(3) span {
-  background-image: url("./images/Illustration_3.jpg");
+  background-image: url("./images/Illustration_3.webp");
   animation-delay: 12s;
 }
 

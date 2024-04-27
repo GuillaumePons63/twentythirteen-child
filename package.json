@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "minify --css style.css > assets/style.min.css"
+    "build": "minify style.css > style.min.css"
   },
   "keywords": [],
   "author": "",

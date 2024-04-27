@@ -1,0 +1,10 @@
+Nettoyage des thème
+Mise à jour des thème
+nettoyage des extentions
+mise à jour des extentions
+
+modifcation calendrier google.
+
+
+Modification des images slider (optimisation)
+Minification du CSS (optimisation)
